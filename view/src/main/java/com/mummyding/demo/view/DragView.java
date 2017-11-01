@@ -42,9 +42,11 @@ public class DragView extends View {
                         break;
                     case MotionEvent.ACTION_MOVE:
                         DLog.d(TAG, "ACTION_MOVE " + motionEvent.getX() + " " + motionEvent.getY());
-                        DLog.d(TAG, "ACTION_MOVE raw " + motionEvent.getRawX() + " " + motionEvent.getRawY());
-                        DLog.d(TAG, "ACTION_MOVE left " + getLeft() + " " + getTop());
-                        DLog.d(TAG, "ACTION_MOVE trans " + getTranslationX() + " " + getTranslationY());
+                        DLog.d(TAG, "ACTION_MOVE par xy" + getX() + " " + getY());
+
+//                        DLog.d(TAG, "ACTION_MOVE raw " + motionEvent.getRawX() + " " + motionEvent.getRawY());
+//                        DLog.d(TAG, "ACTION_MOVE left " + getLeft() + " " + getTop());
+//                        DLog.d(TAG, "ACTION_MOVE trans " + getTranslationX() + " " + getTranslationY());
                         float mx = getX() + (motionEvent.getX() - mLastX);
                         float my = getY() + (motionEvent.getY() - mLastY);
                         DLog.d(TAG, "ACTION_MOVE xy " + mx + " " + my);

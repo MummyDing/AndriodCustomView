@@ -10,4 +10,18 @@
         android:layout_height="50dp"
         android:background="@drawable/ic_launcher" />
 
+    <com.mummyding.demo.view.ViewDragLayout
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:visibility="visible"
+        android:background="@android:color/darker_gray">
+
+        <TextView
+            android:id="@+id/child_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ViewDragLayout\nViewDragLayout\nViewDragLayout\nViewDragLayout"
+            android:textColor="@android:color/holo_red_dark" />
+    </com.mummyding.demo.view.ViewDragLayout>
+
 </RelativeLayout>
