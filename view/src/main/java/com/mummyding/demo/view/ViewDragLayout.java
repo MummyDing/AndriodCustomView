@@ -96,14 +96,14 @@ public class ViewDragLayout extends FrameLayout {
                 isViewNeedDrag = true;
                 mLastX = event.getX();
                 mLastY = event.getY();
-                DLog.d(TAG, "ACTION_DOWN event xy " + mLastX + " " + mLastY);
-                DLog.d(TAG, "ACTION_DOWN xy " + getX() + " " + getY());
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (!mIsDraging) {
                     return false;
                 }
-                move((event.getX() - mLastX), (event.getY() - mLastY));
+                float offsetX = event.getX() - mLastX - getChildView().getLeft();
+                float offsetY = event.getY() - mLastY - getChildView().getTop();
+                move(offsetX, offsetY);
                 mLastX = event.getX();
                 mLastY = event.getY();
                 break;
@@ -122,12 +122,10 @@ public class ViewDragLayout extends FrameLayout {
      * @param offsetY
      */
     private void move(float offsetX, float offsetY) {
-        DLog.d(TAG, "move " + offsetX + " " + offsetY);
         View view = getChildView();
         if (view == null) {
             return;
         }
-        DLog.d(TAG, "move xy " + view.getX() + " " + view.getY());
         float translationX = offsetX + view.getX();
         float translationY = offsetY + view.getY();
 

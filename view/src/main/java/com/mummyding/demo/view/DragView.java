@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.mummyding.demo.utils.DLog;
 
@@ -16,6 +17,7 @@ public class DragView extends View {
     private static final String TAG = "DragView";
     private float mLastX = 0;
     private float mLastY = 0;
+
     public DragView(Context context) {
         this(context, null);
     }
@@ -37,21 +39,11 @@ public class DragView extends View {
                     case MotionEvent.ACTION_DOWN:
                         mLastX = motionEvent.getX();
                         mLastY = motionEvent.getY();
-                        DLog.d(TAG, "ACTION_DOWN " + motionEvent.getX() + " " + motionEvent.getY());
-                        DLog.d(TAG, "ACTION_DOWN par xy" + getX() + " " + getY());
+
                         break;
                     case MotionEvent.ACTION_MOVE:
-                        DLog.d(TAG, "ACTION_MOVE " + motionEvent.getX() + " " + motionEvent.getY());
-                        DLog.d(TAG, "ACTION_MOVE par xy" + getX() + " " + getY());
-
-//                        DLog.d(TAG, "ACTION_MOVE raw " + motionEvent.getRawX() + " " + motionEvent.getRawY());
-//                        DLog.d(TAG, "ACTION_MOVE left " + getLeft() + " " + getTop());
-//                        DLog.d(TAG, "ACTION_MOVE trans " + getTranslationX() + " " + getTranslationY());
-                        float mx = getX() + (motionEvent.getX() - mLastX);
-                        float my = getY() + (motionEvent.getY() - mLastY);
-                        DLog.d(TAG, "ACTION_MOVE xy " + mx + " " + my);
-                        setTranslationX(mx);
-                        setTranslationY(my);
+                        float mx = getX() + (motionEvent.getX() - mLastX) - getLeft();
+                        float my = getY() + (motionEvent.getY() - mLastY) - getTop();
                         break;
                     case MotionEvent.ACTION_UP:
                         DLog.d(TAG, "ACTION_UP " + motionEvent.getX() + " " + motionEvent.getY());
