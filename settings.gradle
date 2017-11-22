@@ -1,1 +1,1 @@
-include ':view'
+include ':view', ':router'
