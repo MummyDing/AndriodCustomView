@@ -1,4 +1,4 @@
-package com.mummyding.demo.webp;
+package com.mummyding.demo.webp.adapter;
 
 /**
  * Created by dingqinying on 2017/12/2.
