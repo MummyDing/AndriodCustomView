@@ -9,3 +9,5 @@
 
    嵌入该布局的View支持被拖拽，可简单定义拖拽生效区域及可拖拽区域
 
+**调研**
+1. [**页面路由**](https://github.com/MummyDing/AndriodDemo/tree/master/router/src/main/java/com/mummyding/demo)
