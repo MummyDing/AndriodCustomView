@@ -10,6 +10,7 @@ import android.widget.CompoundButton;
 import com.bumptech.glide.Glide;
 import com.mummyding.demo.webp.activity.LocalImageActivity;
 import com.mummyding.demo.webp.activity.UriImageActivity;
+import com.mummyding.demo.webp.activity.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 LocalImageActivity.launch(this, mEnableWebP);
                 break;
             case R.id.webview_img:
+                WebViewActivity.launch(this, mEnableWebP);
                 break;
             case R.id.clear_cache:
                 new Thread(new Runnable() {
