@@ -19,9 +19,9 @@
             android:text="透明像素 webp"
             android:textColor="@android:color/white" />
 
-        <ImageView
-            android:id="@+id/replace"
-            android:layout_width="wrap_content"
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/trans_webp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/test_trans_image_webp" />
 
@@ -32,9 +32,10 @@
             android:textColor="@android:color/white" />
 
         <ImageView
+            android:id="@+id/trans_png"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:src="@drawable/test_trans_image" />
+            android:src="@drawable/test_trans_image"
+            android:layout_height="200dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -43,6 +44,7 @@
             android:textColor="@android:color/white" />
 
         <ImageView
+            android:id="@+id/normal_png"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/test_color_img" />
@@ -54,6 +56,7 @@
             android:textColor="@android:color/white" />
 
         <ImageView
+            android:id="@+id/normal_webp"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/test_color_img_webp" />

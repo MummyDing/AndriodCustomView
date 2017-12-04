@@ -9,12 +9,10 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.mummyding.demo.webp.R;
 
-public class CompareActivity extends AppCompatActivity {
-
-
+public class GlideCompareActivity extends AppCompatActivity {
 
     public static void launch(Context context) {
-        Intent intent = new Intent(context, CompareActivity.class);
+        Intent intent = new Intent(context, GlideCompareActivity.class);
         context.startActivity(intent);
     }
 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.mummyding.demo.webp.activity.GifActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gif格式动图" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/normal_gif"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="webp格式动图" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/webp_gif"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gif格式透明动图" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/normal_trans_gif"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="webp格式透明动图" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/webp_trans_gif"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="透明像素 webp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/webp_trans_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

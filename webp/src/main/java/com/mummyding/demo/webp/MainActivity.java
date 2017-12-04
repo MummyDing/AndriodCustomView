@@ -1,6 +1,5 @@
 package com.mummyding.demo.webp;
 
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +7,9 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import com.bumptech.glide.Glide;
-import com.mummyding.demo.webp.activity.CompareActivity;
+import com.mummyding.demo.webp.activity.FrescoCompareActivity;
+import com.mummyding.demo.webp.activity.GlideCompareActivity;
+import com.mummyding.demo.webp.activity.GifActivity;
 import com.mummyding.demo.webp.activity.LocalImageActivity;
 import com.mummyding.demo.webp.activity.UriImageActivity;
 import com.mummyding.demo.webp.activity.WebViewActivity;
@@ -26,7 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setupClickEvent(R.id.local_img);
         setupClickEvent(R.id.webview_img);
         setupClickEvent(R.id.clear_cache);
-        setupClickEvent(R.id.compare_img);
+        setupClickEvent(R.id.glide_compare_img);
+        setupClickEvent(R.id.gif_img);
+        setupClickEvent(R.id.fresco_compare_img);
 
         mCheckBoxEnableWebP = findViewById(R.id.enable_webp);
         mCheckBoxEnableWebP.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -53,6 +56,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.webview_img:
                 WebViewActivity.launch(this, mEnableWebP);
                 break;
+            case R.id.glide_compare_img:
+                GlideCompareActivity.launch(this);
+                break;
+            case R.id.fresco_compare_img:
+                FrescoCompareActivity.launch(this);
+                break;
+            case R.id.gif_img:
+                GifActivity.launch(this);
+                break;
             case R.id.clear_cache:
                 new Thread(new Runnable() {
                     @Override
@@ -61,9 +73,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }).start();
                 Glide.get(this).clearMemory();
-                break;
-            case R.id.compare_img:
-                CompareActivity.launch(this);
                 break;
             default:
                 break;

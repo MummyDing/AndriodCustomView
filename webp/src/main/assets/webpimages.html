@@ -5,6 +5,11 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="format-detection" content="telephone=no" />
 	<title>图片</title>
+	<style>
+		img{max-width:100%!import}
+		body{max-width:100%}
+		li,ul{max-width:100%!import}
+	</style>
 	<script type="text/javascript"> 
 		function createList() {
 			var urlList = new Array( "http://edu-image.nosdn.127.net/C65CB3C4A92BA594AA2C65099AB0B24B.jpg?imageView=&thumbnail=270y270&quality=100",
@@ -89,7 +94,7 @@
     )
 			var result = "<ul ";
 			for (var i = 0; i < urlList.length; i++) {
-				result += ("<li> <img src = \"" + urlList[i] +"&type=webp" + "\" /></li>");
+				result += ("<li> <img style='width:100%' src = \"" + urlList[i] +"&type=webp" + "\" /></li>");
 			}
 			result += "</ul>";
 			document.write(result);
