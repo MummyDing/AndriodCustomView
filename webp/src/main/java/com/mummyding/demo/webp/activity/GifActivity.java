@@ -32,6 +32,7 @@ public class GifActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Fresco加载动图");
         setContentView(R.layout.activity_gif);
 
         mNormalGif = findViewById(R.id.normal_gif);

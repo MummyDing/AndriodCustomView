@@ -22,6 +22,7 @@ public class FrescoCompareActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fresco_compare);
+        setTitle("Fresco加载WebP图片 兼容性对比");
         mTranWebp = findViewById(R.id.trans_webp);
         Uri uri = new Uri.Builder().scheme("res")
                 .path(String.valueOf(R.drawable.test_trans_image_webp))

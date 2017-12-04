@@ -19,6 +19,7 @@ public class GlideCompareActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Glide加载WebP图片 兼容性对比");
         setContentView(R.layout.activity_compare);
         Glide.with(this)
                 .load(R.drawable.test_trans_image_webp)

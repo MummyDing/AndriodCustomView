@@ -26,6 +26,7 @@ public class WebViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("WebView加载图片");
         setContentView(R.layout.activity_web_view);
         mTimeTip = findViewById(R.id.time);
         mWebView = findViewById(R.id.webview);
