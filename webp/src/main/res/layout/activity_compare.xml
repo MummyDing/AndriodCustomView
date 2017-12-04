@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        tools:context="com.mummyding.demo.webp.activity.CompareActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="透明像素 webp"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/replace"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/test_trans_image_webp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="透明像素 png"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/test_trans_image" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="无透明像素 png"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/test_color_img" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="无透明像素 webp"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/test_color_img_webp" />
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

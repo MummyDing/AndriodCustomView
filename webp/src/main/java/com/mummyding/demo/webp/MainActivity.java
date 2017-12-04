@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import com.bumptech.glide.Glide;
+import com.mummyding.demo.webp.activity.CompareActivity;
 import com.mummyding.demo.webp.activity.LocalImageActivity;
 import com.mummyding.demo.webp.activity.UriImageActivity;
 import com.mummyding.demo.webp.activity.WebViewActivity;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setupClickEvent(R.id.local_img);
         setupClickEvent(R.id.webview_img);
         setupClickEvent(R.id.clear_cache);
+        setupClickEvent(R.id.compare_img);
 
         mCheckBoxEnableWebP = findViewById(R.id.enable_webp);
         mCheckBoxEnableWebP.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -59,6 +61,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }).start();
                 Glide.get(this).clearMemory();
+                break;
+            case R.id.compare_img:
+                CompareActivity.launch(this);
                 break;
             default:
                 break;

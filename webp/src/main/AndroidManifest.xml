@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".activity.UriImageActivity" />
         <activity android:name=".activity.LocalImageActivity" />
-        <activity android:name=".activity.WebViewActivity"></activity>
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.CompareActivity"></activity>
     </application>
 
 </manifest>
