@@ -12,7 +12,8 @@
 	</style>
 	<script type="text/javascript"> 
 		function createList() {
-			var urlList = new Array( "http://edu-image.nosdn.127.net/C65CB3C4A92BA594AA2C65099AB0B24B.jpg?imageView=&thumbnail=270y270&quality=100",
+			var urlList = new Array(
+			"http://edu-image.nosdn.127.net/C65CB3C4A92BA594AA2C65099AB0B24B.jpg?imageView=&thumbnail=270y270&quality=100",
             "http://edu-image.nosdn.127.net/9F0B19C1951EED9CB8C0591CF572F6EB.jpg?imageView=&thumbnail=1152y527&quality=100",
             "http://edu-image.nosdn.127.net/b2aada26-b291-4e8a-8d74-2eb9e9b07711.png?imageView=&quality=100&thumbnail=1152y527",
             "http://edu-image.nosdn.127.net/113fb553-588b-4150-a61a-169758e557f2.jpg?imageView=&thumbnail=1152y527&quality=100",
@@ -93,6 +94,7 @@
             "http://edu-image.nosdn.127.net/491def41-0c07-46f2-b3a9-fb866f3a427d.jpg?imageView=&quality=100&thumbnail=666y417"
     )
 			var result = "<ul ";
+			result += ("<li> <img style='width:100%' src = \"" + "https://s5.ezgif.com/save/ezgif-5-341c7db287.webp" + "\" /></li>");
 			for (var i = 0; i < urlList.length; i++) {
 				result += ("<li> <img style='width:100%' src = \"" + urlList[i] +"&type=webp" + "\" /></li>");
 			}
