@@ -11,3 +11,9 @@
 
 **调研**
 1. [**页面路由**](https://github.com/MummyDing/AndriodDemo/tree/master/router/src/main/java/com/mummyding/demo)
+
+2. [**WebP**](https://github.com/MummyDing/AndriodDemo/tree/master/webp)
+
+   [【技术调研】WebP格式在Android平台上的应用](http://blog.csdn.net/mummyding/article/details/78732296)
+
+   ​
