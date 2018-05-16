@@ -1,1 +1,1 @@
-include ':view', ':router', ':webp'
+include ':view', ':router', ':webp', ':autostatistic'
